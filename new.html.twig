@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{ form_start(formuser) }}
+{{ form_widget(formuser) }}
+
+<button href = '{{path('user')}}' type="submit" class="btn btt-danger"> enregister </button>
+{{ form_end(formuser) }}
+{% endblock %}
