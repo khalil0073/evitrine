@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<table class="table">
+    <thead>
+        <tr>
+
+            <th scope="col">Libelle</th>
+            <th scope="col">Image</th>
+            <th scope="col">Description</th>
+            <th scope="col">Prix-Unitaire</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td scope="row"></td>
+            <td>{{product.libelle}}</td>
+            <td>{{product.image}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.prixu}}</td>
+
+        </tr>
+
+    </tbody>
+</table>
+<a href="{{path('delete',{'id':product.id})}}" class="btn btn-secondary">Supprimer</a>
+<a href="{{path('add',{'id':product.id})}}" class="btn btn-success">Ajouter au panier</a>
+<a href=" " class="btn btn-danger">Mettre à jour</a>
+{% endblock %}
